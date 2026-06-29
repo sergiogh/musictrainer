@@ -1,11 +1,11 @@
 {
-  "name": "Signal Path",
+  "name": "Signal Path Jam Trainer",
   "short_name": "Signal Path",
-  "description": "Ear training for guitar players with intervals, scale type, progressions, theory drills, and melody completion.",
+  "description": "A mobile-first jam trainer for guitar players: hear the key, learn the chords, choose the scale, and map it across the fretboard.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f4efe4",
-  "theme_color": "#f1c56c",
+  "background_color": "#120f0c",
+  "theme_color": "#120f0c",
   "orientation": "portrait",
   "icons": [
     {

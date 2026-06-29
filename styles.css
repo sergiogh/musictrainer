@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap");
 
 :root {
-  --bg: #f4efe4;
-  --bg-strong: #e3d8c4;
-  --ink: #1e1d1a;
-  --muted: #5f6056;
-  --line: rgba(30, 29, 26, 0.12);
-  --card: rgba(255, 250, 242, 0.8);
-  --card-strong: rgba(255, 246, 230, 0.94);
-  --accent: #d55f35;
-  --accent-2: #1e8b7a;
-  --accent-3: #f1c56c;
-  --accent-4: #335c81;
-  --danger: #9c2f2f;
-  --success: #1f7a4d;
-  --shadow: 0 18px 45px rgba(40, 28, 11, 0.12);
+  --bg: #120f0c;
+  --bg-strong: #21170f;
+  --ink: #fff3de;
+  --muted: #c7b8a0;
+  --line: rgba(255, 235, 198, 0.16);
+  --card: rgba(31, 25, 20, 0.88);
+  --card-strong: rgba(42, 32, 23, 0.96);
+  --accent: #f0642f;
+  --accent-2: #4eb7a1;
+  --accent-3: #f2bf5e;
+  --accent-4: #8d7bff;
+  --danger: #e05549;
+  --success: #63c783;
+  --shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
   --radius-xl: 22px;
   --radius-lg: 16px;
   --radius-md: 12px;
@@ -31,9 +31,9 @@ body {
   margin: 0;
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(241, 197, 108, 0.65), transparent 32%),
-    radial-gradient(circle at top right, rgba(30, 139, 122, 0.28), transparent 28%),
-    linear-gradient(180deg, #f6efe1 0%, #efe4d1 56%, #ebe1d1 100%);
+    radial-gradient(circle at 14% 0%, rgba(240, 100, 47, 0.42), transparent 30%),
+    radial-gradient(circle at 82% 8%, rgba(78, 183, 161, 0.28), transparent 26%),
+    linear-gradient(180deg, #18110d 0%, #110f0c 48%, #21170f 100%);
   color: var(--ink);
   font-family: "Space Grotesk", sans-serif;
 }
@@ -53,10 +53,11 @@ body::before {
   pointer-events: none;
   opacity: 0.22;
   background-image:
-    linear-gradient(rgba(30, 29, 26, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 29, 26, 0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 88%);
+    linear-gradient(rgba(255, 232, 191, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 232, 191, 0.06) 1px, transparent 1px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 7px);
+  background-size: 28px 28px, 28px 28px, 10px 10px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 92%);
 }
 
 button,
@@ -280,6 +281,10 @@ button {
 
 .feature-card[data-accent="red"] {
   background: linear-gradient(180deg, rgba(255, 240, 238, 0.96), rgba(251, 228, 225, 0.92));
+}
+
+.feature-card[data-accent="green"] {
+  background: linear-gradient(180deg, rgba(238, 249, 238, 0.96), rgba(220, 239, 219, 0.92));
 }
 
 .feature-label,
@@ -613,6 +618,167 @@ button {
   margin: 8px 0 0;
 }
 
+.guitar-map {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 251, 245, 0.92);
+  border: 1px solid rgba(30, 29, 26, 0.1);
+}
+
+.guitar-map-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.map-card,
+.tab-card {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 252, 246, 0.86);
+  border: 1px solid rgba(30, 29, 26, 0.09);
+}
+
+.target-card {
+  background: rgba(30, 139, 122, 0.1);
+  border-color: rgba(30, 139, 122, 0.2);
+}
+
+.anchor-row,
+.chord-map-list {
+  display: grid;
+  gap: 10px;
+}
+
+.anchor-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 8px 0;
+}
+
+.anchor-pill,
+.roman-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(30, 29, 26, 0.12);
+  background: rgba(255, 250, 242, 0.92);
+}
+
+.anchor-pill {
+  min-height: 48px;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.scale-formula {
+  margin: 8px 0 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.chord-map-row {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 252, 246, 0.82);
+  border: 1px solid rgba(30, 29, 26, 0.09);
+}
+
+.chord-map-row.outside {
+  background: rgba(213, 95, 53, 0.1);
+  border-color: rgba(213, 95, 53, 0.22);
+}
+
+.chord-map-row p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.roman-badge {
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.fretboard-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.fretboard-grid {
+  display: grid;
+  grid-template-columns: 46px repeat(var(--fret-count, 13), minmax(34px, 1fr));
+  min-width: 488px;
+  border: 1px solid rgba(30, 29, 26, 0.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(255, 252, 246, 0.94);
+}
+
+.fretboard-corner,
+.fret-label,
+.string-label,
+.fret-note {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(30, 29, 26, 0.08);
+  border-bottom: 1px solid rgba(30, 29, 26, 0.08);
+  font-size: 0.72rem;
+}
+
+.fretboard-corner,
+.fret-label,
+.string-label {
+  font-weight: 700;
+  color: var(--muted);
+  background: rgba(30, 29, 26, 0.04);
+}
+
+.fret-note {
+  color: rgba(30, 29, 26, 0.34);
+}
+
+.fret-note.scale-tone {
+  color: var(--ink);
+  background: rgba(30, 139, 122, 0.1);
+}
+
+.fret-note.chord-tone {
+  color: var(--ink);
+  background: rgba(241, 197, 108, 0.28);
+  font-weight: 700;
+}
+
+.fret-note.root {
+  color: #fff8f0;
+  background: var(--accent);
+  font-weight: 700;
+}
+
+.tab-card pre {
+  margin: 10px 0 0;
+  overflow-x: auto;
+  color: var(--ink);
+  font: 700 0.82rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
 .summary-score {
   font-size: clamp(3rem, 18vw, 4.8rem);
 }
@@ -727,6 +893,20 @@ button {
   .free-response-row {
     grid-template-columns: 1fr;
   }
+
+  .guitar-map-head,
+  .map-grid,
+  .anchor-row {
+    grid-template-columns: 1fr;
+  }
+
+  .guitar-map-head {
+    display: grid;
+  }
+
+  .chord-map-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 520px) {
@@ -817,9 +997,9 @@ button {
 
 @media (min-width: 960px) {
   .app-shell {
-    width: min(calc(100% - 136px), 1040px);
+    width: min(calc(100% - 240px), 1040px);
     margin-left: auto;
-    margin-right: 112px;
+    margin-right: auto;
     padding-bottom: 36px;
   }
 
@@ -853,5 +1033,1259 @@ button {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Rock-and-roll practical jam UI */
+.rock-hero,
+.stage-panel,
+.answer-card,
+.trainer-mode-card,
+.shape-card {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 38%),
+    var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.jam-ready-stack,
+.trainer-stack,
+.fretboard-lab-stack,
+.chords-stack {
+  display: grid;
+  gap: 18px;
+  animation: rise-in 320ms ease;
+}
+
+.rock-hero {
+  min-height: 278px;
+  border-radius: 30px;
+  padding: 26px;
+  display: grid;
+  align-items: end;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(240, 100, 47, 0.44), transparent 34%),
+    radial-gradient(circle at 92% 16%, rgba(242, 191, 94, 0.22), transparent 24%),
+    linear-gradient(145deg, rgba(39, 27, 19, 0.98), rgba(18, 15, 12, 0.94));
+}
+
+.rock-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 238, 202, 0.05) 0 2px, transparent 2px 9px),
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.34));
+  pointer-events: none;
+}
+
+.rock-hero.compact {
+  min-height: 210px;
+}
+
+.hero-copy-block,
+.rock-hero > div:not(.stage-meter) {
+  position: relative;
+  z-index: 1;
+}
+
+.amp-label {
+  margin: 0 0 8px;
+  color: var(--accent-3);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.rock-title {
+  margin: 0;
+  font-family: "Bebas Neue", "Fraunces", serif;
+  font-size: clamp(3rem, 12vw, 6.4rem);
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.rock-title.small {
+  font-size: clamp(2.8rem, 10vw, 4.5rem);
+}
+
+.rock-subtitle {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 1.03rem;
+}
+
+.stage-meter {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  display: flex;
+  gap: 5px;
+  align-items: end;
+  height: 62px;
+  opacity: 0.78;
+}
+
+.stage-meter span {
+  width: 9px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent-3), var(--accent));
+  box-shadow: 0 0 24px rgba(240, 100, 47, 0.5);
+}
+
+.stage-meter span:nth-child(1) { height: 38%; }
+.stage-meter span:nth-child(2) { height: 72%; }
+.stage-meter span:nth-child(3) { height: 52%; }
+.stage-meter span:nth-child(4) { height: 88%; }
+
+.stage-panel {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.stage-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.stage-chip {
+  min-height: 44px;
+  border-radius: 999px;
+  padding: 0 15px;
+  border: 1px solid rgba(255, 235, 198, 0.16);
+  background: rgba(255, 243, 222, 0.07);
+  color: var(--ink);
+  font-weight: 800;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.stage-chip:hover,
+.stage-chip.active {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(240, 100, 47, 0.95), rgba(242, 191, 94, 0.9));
+  border-color: rgba(255, 224, 166, 0.5);
+  color: #160f0b;
+}
+
+.hot-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: rgba(240, 100, 47, 0.16);
+  border: 1px solid rgba(240, 100, 47, 0.34);
+  color: #ffd5bc;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.jam-answer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.answer-card {
+  min-height: 156px;
+  border-radius: 24px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.answer-card.hot {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(240, 100, 47, 0.32), transparent 42%),
+    var(--card-strong);
+}
+
+.answer-card h2 {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.4rem, 10vw, 4rem);
+  line-height: 0.9;
+  color: var(--ink);
+}
+
+.answer-card p:last-child {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.42;
+}
+
+.answer-number {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  color: rgba(255, 243, 222, 0.18);
+  font: 700 3rem/1 "Bebas Neue", sans-serif;
+}
+
+.play-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.jam-mode-grid,
+.build-grid,
+.shape-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.pick-button,
+.mega-play,
+.trainer-mode-card {
+  border: 1px solid rgba(255, 235, 198, 0.18);
+  color: var(--ink);
+}
+
+.pick-button,
+.mega-play {
+  min-height: 62px;
+  border-radius: 18px 999px 999px 18px;
+  padding: 0 18px;
+  background: linear-gradient(135deg, var(--accent), #f69b45);
+  color: #160f0b;
+  font-weight: 900;
+  text-align: left;
+  box-shadow: 0 14px 30px rgba(240, 100, 47, 0.2);
+}
+
+.pick-button.ghost {
+  background: rgba(255, 243, 222, 0.07);
+  color: var(--ink);
+}
+
+.mega-play {
+  min-height: 92px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  justify-content: center;
+}
+
+.trainer-mode-list {
+  display: grid;
+  gap: 12px;
+}
+
+.trainer-mode-card {
+  min-height: 92px;
+  border-radius: 22px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+  text-align: left;
+}
+
+.trainer-mode-card > span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(240, 100, 47, 0.18);
+  color: var(--accent-3);
+  font-weight: 900;
+}
+
+.trainer-mode-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.trainer-mode-card p,
+.shape-card p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  line-height: 1.38;
+}
+
+.chord-strip,
+.mini-degree-list {
+  display: grid;
+  gap: 10px;
+}
+
+.chord-strip {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.degree-tile {
+  min-height: 86px;
+  border: 1px solid rgba(255, 235, 198, 0.13);
+  border-radius: 18px;
+  padding: 13px;
+  display: grid;
+  gap: 4px;
+  background: rgba(255, 243, 222, 0.055);
+  color: var(--ink);
+  text-align: left;
+}
+
+.degree-tile.active {
+  background: rgba(240, 100, 47, 0.16);
+  border-color: rgba(240, 100, 47, 0.35);
+}
+
+.degree-tile span {
+  color: var(--accent-3);
+  font-weight: 900;
+}
+
+.degree-tile small {
+  color: var(--muted);
+}
+
+.fretboard-control-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.neck-stage .fretboard-scroll,
+.chord-focus-panel .fretboard-scroll,
+.fretboard-preview-panel .fretboard-scroll {
+  margin-top: 12px;
+}
+
+.shape-grid {
+  grid-template-columns: 1fr;
+}
+
+.shape-card {
+  border-radius: 22px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shape-card h2 {
+  margin: 14px 0 6px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.shape-anchor {
+  display: inline-flex;
+  min-height: 36px;
+  padding: 0 12px;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(78, 183, 161, 0.16);
+  color: #a8f1df;
+  font-weight: 900;
+}
+
+.shape-formula {
+  color: var(--accent-3) !important;
+  font-weight: 900;
+}
+
+.spacer-label {
+  margin-top: 18px;
+}
+
+.mini-degree-list {
+  margin-top: 14px;
+}
+
+.mini-degree-list span {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 243, 222, 0.06);
+  border: 1px solid rgba(255, 235, 198, 0.1);
+}
+
+.hero-panel,
+.feature-card,
+.continue-card,
+.setup-panel,
+.session-panel,
+.summary-panel,
+.progress-panel,
+.settings-card,
+.insight-card,
+.guitar-map,
+.map-card,
+.tab-card,
+.feedback-panel {
+  background: var(--card);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.mini-stat,
+.choice-pill,
+.toggle-pill,
+.answer-button,
+.response-input,
+.icon-button,
+.secondary-button,
+.pill,
+.surface-pill,
+.anchor-pill,
+.roman-badge,
+.chord-map-row {
+  background: rgba(255, 243, 222, 0.07);
+  border-color: rgba(255, 235, 198, 0.15);
+  color: var(--ink);
+}
+
+.feature-card[data-accent="orange"],
+.feature-card[data-accent="teal"],
+.feature-card[data-accent="gold"],
+.feature-card[data-accent="blue"],
+.feature-card[data-accent="red"],
+.feature-card[data-accent="green"] {
+  background:
+    radial-gradient(circle at 88% 10%, rgba(240, 100, 47, 0.18), transparent 36%),
+    var(--card);
+}
+
+.feature-label,
+.pill,
+.feedback-pill,
+.nav-button span:last-child,
+.detail-label,
+.detail-copy,
+.section-copy,
+.hero-subtitle,
+.support-copy,
+.chip-copy,
+.question-support,
+.chord-map-row p {
+  color: var(--muted);
+}
+
+.choice-pill.active,
+.toggle-pill.active,
+.nav-button.active {
+  background: rgba(240, 100, 47, 0.18);
+  border-color: rgba(240, 100, 47, 0.34);
+  color: var(--ink);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+.primary-button,
+.play-button {
+  background: linear-gradient(135deg, var(--accent), #f69b45);
+  color: #160f0b;
+}
+
+.ghost-button {
+  color: var(--ink);
+  border-color: rgba(255, 235, 198, 0.2);
+}
+
+.fretboard-grid {
+  background: #211c16;
+  border-color: rgba(255, 235, 198, 0.18);
+}
+
+.fretboard-corner,
+.fret-label,
+.string-label {
+  background: #2d251d;
+  color: #ddc8a5;
+  border-color: rgba(255, 235, 198, 0.1);
+}
+
+.fret-note {
+  color: rgba(255, 243, 222, 0.35);
+  border-color: rgba(255, 235, 198, 0.08);
+}
+
+.fret-note.plain {
+  color: #e4d5bb;
+  background: rgba(255, 243, 222, 0.035);
+}
+
+.fret-note.scale-tone {
+  color: #eafff8;
+  background: rgba(78, 183, 161, 0.16);
+}
+
+.fret-note.chord-tone {
+  color: #1b1009;
+  background: rgba(242, 191, 94, 0.88);
+}
+
+.fret-note.root {
+  color: #160f0b;
+  background: var(--accent);
+}
+
+.bottom-nav {
+  background: linear-gradient(180deg, rgba(18, 15, 12, 0), rgba(18, 15, 12, 0.94) 34%);
+}
+
+.bottom-nav-inner {
+  background: rgba(28, 22, 17, 0.94);
+  border-color: rgba(255, 235, 198, 0.14);
+}
+
+.nav-button {
+  color: var(--muted);
+}
+
+.tool-card {
+  min-height: 150px;
+}
+
+@media (min-width: 720px) {
+  .jam-answer-grid,
+  .jam-mode-grid,
+  .build-grid,
+  .shape-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chord-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 860px) {
+  .jam-ready-stack,
+  .trainer-stack,
+  .fretboard-lab-stack,
+  .chords-stack {
+    gap: 22px;
+  }
+
+  .rock-hero {
+    min-height: 330px;
+  }
+
+  .rock-hero.compact {
+    min-height: 240px;
+  }
+
+  .fretboard-control-panel {
+    grid-template-columns: 1fr 1fr minmax(260px, 1.35fr);
+    align-items: start;
+  }
+
+  .jam-answer-grid {
+    grid-template-columns: 1.05fr 1fr 1fr;
+  }
+
+  .play-panel.big-play-card {
+    grid-template-columns: 1fr minmax(220px, 0.42fr);
+    align-items: center;
+  }
+
+  .trainer-mode-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shape-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.fretboard-lab-stack .rock-hero.compact,
+.chords-stack .rock-hero.compact {
+  min-height: 154px;
+}
+
+.fretboard-lab-stack .rock-title,
+.chords-stack .rock-title {
+  font-size: clamp(2.75rem, 7vw, 4.25rem);
+}
+
+.fretboard-lab-stack .rock-subtitle,
+.chords-stack .rock-subtitle {
+  max-width: 780px;
+}
+
+.neck-stage {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(78, 183, 161, 0.14), transparent 34%),
+    var(--card-strong);
+}
+
+@media (max-width: 420px) {
+  .rock-hero {
+    min-height: 238px;
+    padding: 22px;
+  }
+
+  .rock-title {
+    font-size: clamp(2.8rem, 16vw, 4.2rem);
+  }
+
+  .panel-head {
+    display: grid;
+  }
+
+  .chord-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep the actual exercise focused and laptop-safe. */
+.session-stack {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.session-panel,
+.session-panel * {
+  min-width: 0;
+}
+
+.question-prompt {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 860px) {
+  .session-stack {
+    grid-template-columns: minmax(0, 760px);
+    justify-content: center;
+  }
+}
+
+.bottom-nav {
+  z-index: 80;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.rock-title,
+.answer-card h2,
+.section-title {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.stage-panel,
+.rock-hero,
+.answer-card {
+  max-width: 100%;
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .rock-title {
+    font-size: clamp(2.35rem, 12vw, 3.45rem);
+    line-height: 0.95;
+  }
+
+  .rock-title.small {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+  }
+
+  .answer-card h2 {
+    font-size: clamp(2.1rem, 11vw, 3rem);
+  }
+
+  .rock-hero {
+    min-height: 220px;
+  }
+
+  .fretboard-lab-stack .rock-hero.compact,
+  .chords-stack .rock-hero.compact {
+    min-height: 166px;
+  }
+
+  .stage-chip-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+
+  .stage-chip {
+    flex: 0 0 auto;
+  }
+
+  .jam-answer-grid,
+  .trainer-mode-list,
+  .shape-grid,
+  .build-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .answer-number {
+    font-size: 2.25rem;
+  }
+}
+
+.rock-title span {
+  display: block;
+}
+
+/* Fretboard reference lab inspired by interactive neck tools, using Signal Path colors */
+.fretastic-control-panel {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.control-block {
+  grid-column: span 4;
+  min-width: 0;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 243, 222, 0.045);
+  border: 1px solid rgba(255, 235, 198, 0.1);
+}
+
+.control-block.wide {
+  grid-column: span 8;
+}
+
+.compact-row {
+  gap: 8px;
+}
+
+.compact-row .stage-chip {
+  min-height: 40px;
+  padding: 0 13px;
+}
+
+.chord-color-row {
+  margin-top: 10px;
+}
+
+.mini-toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mini-toggle {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 235, 198, 0.16);
+  background: rgba(255, 243, 222, 0.06);
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.mini-toggle.active {
+  color: #160f0b;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  border-color: rgba(168, 241, 223, 0.46);
+}
+
+.lab-range {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.range-readout {
+  display: inline-flex;
+  margin-top: 8px;
+  color: var(--accent-3);
+}
+
+.lab-utility-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.62fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.utility-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.metronome-box {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(18, 15, 12, 0.46);
+  border: 1px solid rgba(255, 235, 198, 0.12);
+}
+
+.metronome-box.active {
+  border-color: rgba(78, 183, 161, 0.5);
+  box-shadow: 0 0 0 1px rgba(78, 183, 161, 0.14), 0 14px 32px rgba(78, 183, 161, 0.12);
+}
+
+.scale-notes-row {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.scale-notes-row span {
+  min-height: 34px;
+  min-width: 44px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(78, 183, 161, 0.14);
+  color: #c6fff2;
+  font-weight: 900;
+}
+
+.exercise-deck,
+.lab-theory-strip {
+  display: grid;
+  gap: 12px;
+}
+
+.exercise-card {
+  min-height: 142px;
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 235, 198, 0.14);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(240, 100, 47, 0.22), transparent 38%),
+    rgba(31, 25, 20, 0.88);
+  color: var(--ink);
+  text-align: left;
+  box-shadow: var(--shadow);
+}
+
+.exercise-card strong {
+  display: block;
+  max-width: 75%;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.exercise-card p {
+  margin: 12px 0 0;
+  max-width: 620px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.exercise-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(242, 191, 94, 0.42);
+}
+
+.rail-fretboard {
+  min-width: calc(var(--fret-count, 13) * 74px + 78px);
+  background:
+    linear-gradient(90deg, rgba(255, 243, 222, 0.04) 0 1px, transparent 1px 74px),
+    linear-gradient(180deg, rgba(255, 243, 222, 0.03), rgba(18, 15, 12, 0.28)),
+    #201915;
+}
+
+.rail-fretboard .fret-label,
+.rail-fretboard .string-label,
+.rail-fretboard .fretboard-corner {
+  min-height: 34px;
+}
+
+.rail-fretboard .fret-note {
+  appearance: none;
+  position: relative;
+  min-height: 46px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: transparent;
+  border-color: rgba(255, 235, 198, 0.055);
+  color: rgba(255, 243, 222, 0.82);
+  text-align: center;
+  transition:
+    color 150ms ease,
+    transform 150ms ease,
+    background-color 150ms ease;
+}
+
+.rail-fretboard .fret-note::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: rgba(255, 243, 222, 0.22);
+  z-index: 0;
+}
+
+.rail-fretboard .fret-note::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 243, 222, 0.07);
+  border: 1px solid rgba(255, 235, 198, 0.1);
+  z-index: 0;
+}
+
+.rail-fretboard .fret-note.root::after {
+  background: var(--accent);
+  border-color: rgba(255, 220, 180, 0.6);
+}
+
+.rail-fretboard .fret-note:hover,
+.rail-fretboard .fret-note:focus-visible,
+.rail-fretboard .fret-note.playing {
+  color: #fff8eb;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.rail-fretboard .fret-note:hover::after,
+.rail-fretboard .fret-note:focus-visible::after {
+  opacity: 1;
+  border-color: rgba(255, 243, 222, 0.42);
+  box-shadow: 0 0 0 4px rgba(240, 100, 47, 0.14);
+}
+
+.rail-fretboard .fret-note.playing::after {
+  opacity: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+  border-color: rgba(255, 243, 222, 0.72);
+  box-shadow: 0 0 0 7px rgba(240, 100, 47, 0.18);
+}
+
+.rail-fretboard .fret-note.scale-tone::after {
+  background: rgba(78, 183, 161, 0.55);
+  border-color: rgba(168, 241, 223, 0.44);
+}
+
+.rail-fretboard .fret-note.chord-tone::after {
+  background: rgba(242, 191, 94, 0.86);
+  border-color: rgba(255, 235, 198, 0.6);
+}
+
+.rail-fretboard .fret-note.ghost::after {
+  opacity: 0.42;
+}
+
+.rail-fretboard .fret-note.silent::after {
+  opacity: 0;
+}
+
+.rail-fretboard .fret-note.silent:hover::after,
+.rail-fretboard .fret-note.silent:focus-visible::after {
+  opacity: 0.62;
+}
+
+.rail-fretboard .fret-note.silent.playing::after,
+.rail-fretboard .fret-note.playing::after {
+  opacity: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+  border-color: rgba(255, 243, 222, 0.72);
+  box-shadow: 0 0 0 7px rgba(240, 100, 47, 0.18);
+}
+
+.rail-fretboard .fret-note {
+  font-weight: 900;
+  z-index: 1;
+}
+
+.rail-fretboard .fret-note > * {
+  position: relative;
+  z-index: 1;
+}
+
+.question-visual-wrap {
+  margin: 16px 0;
+}
+
+.question-visual {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 235, 198, 0.14);
+  background: rgba(255, 243, 222, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.fret-prompt-card {
+  min-height: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 18px;
+}
+
+.fret-string,
+.fret-position,
+.fret-target {
+  display: grid;
+  place-items: center;
+  min-height: 96px;
+  border-radius: 20px;
+  background: rgba(18, 15, 12, 0.38);
+  color: var(--ink);
+  font: 900 clamp(2rem, 8vw, 4rem)/1 "Bebas Neue", sans-serif;
+}
+
+.fret-target {
+  color: #160f0b;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+}
+
+.key-signature-card {
+  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.staff-lines {
+  position: absolute;
+  inset: 32px 20px 56px;
+  display: grid;
+  align-content: space-between;
+}
+
+.staff-lines span {
+  height: 2px;
+  background: rgba(255, 243, 222, 0.32);
+}
+
+.signature-symbols {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 72px;
+}
+
+.signature-symbols span {
+  font: 900 clamp(2rem, 8vw, 4rem)/1 "Bebas Neue", sans-serif;
+  color: var(--accent-3);
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.42);
+}
+
+.signature-symbols .natural-key {
+  color: var(--accent-2);
+}
+
+.key-signature-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+@media (min-width: 760px) {
+  .exercise-deck {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lab-theory-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .fretastic-control-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .control-block,
+  .control-block.wide {
+    grid-column: auto;
+  }
+
+  .lab-utility-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .fret-prompt-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contain the dense fretboard controls on laptop widths. */
+.fretastic-control-panel {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fretastic-control-panel .control-block,
+.fretastic-control-panel .control-block.wide {
+  grid-column: auto;
+  min-width: 0;
+}
+
+.fretastic-control-panel .control-block.wide {
+  grid-column: 1 / -1;
+}
+
+.fretastic-control-panel .stage-chip-row {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.fretastic-control-panel .stage-chip {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 860px) {
+  .fretastic-control-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .fretastic-control-panel .control-block.wide {
+    grid-column: auto;
+  }
+}
+
+.fretboard-lab-stack {
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.fretboard-lab-stack > *,
+.fretboard-lab-stack .stage-panel,
+.fretboard-lab-stack .rock-hero,
+.fretboard-lab-stack .control-block,
+.fretboard-lab-stack .lab-utility-panel,
+.fretboard-lab-stack .neck-stage {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.fretboard-lab-stack .fretboard-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Fretboard Lab should feel like an instrument panel, not a landing hero. */
+.fretboard-lab-stack {
+  gap: 12px;
+}
+
+.fretboard-lab-stack .rock-hero.compact {
+  min-height: 118px;
+  padding: 18px 24px;
+  align-items: center;
+}
+
+.fretboard-lab-stack .rock-title {
+  font-size: clamp(2.2rem, 4.6vw, 3.7rem);
+  line-height: 0.9;
+}
+
+.fretboard-lab-stack .rock-subtitle {
+  margin-top: 8px;
+  font-size: 0.96rem;
+}
+
+.fretastic-control-panel {
+  padding: 14px;
+  gap: 10px;
+}
+
+.fretastic-control-panel .control-block {
+  padding: 10px 12px;
+  border-radius: 16px;
+}
+
+.fretastic-control-panel .amp-label {
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+}
+
+.fretastic-control-panel .stage-chip {
+  min-height: 34px;
+  padding: 0 11px;
+  font-size: 0.92rem;
+}
+
+.fretastic-control-panel .mini-toggle-row {
+  margin-top: 8px;
+}
+
+.fretastic-control-panel .mini-toggle {
+  min-height: 30px;
+  font-size: 0.86rem;
+}
+
+.lab-utility-panel {
+  padding: 14px;
+}
+
+.lab-utility-panel .section-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+@media (max-width: 620px) {
+  .fretboard-lab-stack .rock-hero.compact {
+    min-height: 132px;
+  }
+}
+
+@media (min-width: 900px) {
+  .fretastic-control-panel {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(180px, 0.78fr);
+  }
+
+  .fretastic-control-panel .control-block.wide {
+    grid-column: 1 / -1;
+  }
+
+  .fretboard-lab-stack .rock-hero.compact {
+    min-height: 96px;
+  }
+
+  .fretboard-lab-stack .rock-title {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+  }
+
+  .fretboard-lab-stack .rock-subtitle {
+    max-width: 900px;
   }
 }

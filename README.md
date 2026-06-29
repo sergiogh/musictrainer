@@ -1,23 +1,38 @@
-# Signal Path
+# Signal Path Jam Trainer
 
-Mobile-first ear training for guitar players. Signal Path runs entirely in the browser: no account, no backend, no guitar input, just headphone-based listening drills with local progress.
+Mobile-first guitar jam training that runs entirely in the browser. No account, no backend, no guitar input: just headphones, practical listening exercises, and full-neck guitar maps.
+
+Signal Path is built around the real jam-session question chain:
+
+```text
+What key are they in? -> What chords belong? -> What scale/riff fits? -> What chord tones should I land on?
+```
 
 ## What It Trains
 
-- Intervals: first note, then target note one second later
-- Scale type recognition
-- Chord progression recognition
-- Chord quality and extension color
-- Melody completion by ear
+- Key-center recognition for common guitar jam keys
+- Chords in a key, including Roman numerals and practical chord names
+- Progression hearing: I-IV-V, I-V-vi-IV, ii-V-I, modal vamps, borrowed color, and more
+- Scale/riff choice: major pentatonic, minor pentatonic, blues, major, minor, Mixolydian, Dorian, harmonic minor
+- Full-fretboard navigation from fret 0-12
+- Root, note, interval, scale-tone, and chord-tone overlays
+- Movable chord thinking: root 6, root 5, root 4 shells, and top-string triads
+
+## Main App Areas
+
+- `Jam Ready`: choose a jam key and see the practical band map: key, likely progression, chords, and playable scale.
+- `Play / Trainer`: audio-first jam drills that repeat automatically until you answer.
+- `Neck / Fretboard`: full 0-12 fretboard views for roots, intervals, scales, and chord tones.
+- `Grip / Chords`: build and move chords across the neck instead of staying in open-position shapes.
 
 ## Features
 
 - Real local MP3 instrument samples routed through Tone.js
 - Auto-repeating exercises until the user answers
-- Adaptive concept selection based on local progress
-- Multiple answer styles, including tap choices, delayed reveal, free response, and A/B compare
+- Feedback that maps the answer back to chords and the fretboard
 - Browser-only persistence with `localStorage`
 - PWA-ready static deployment for Vercel
+- No server or build step required
 
 ## Run Locally
 
@@ -31,9 +46,16 @@ Open:
 http://127.0.0.1:4173
 ```
 
+## Verify
+
+```bash
+/opt/homebrew/bin/node --check app.js
+git diff --check
+```
+
 ## Deploy
 
-This is a static app. It can be deployed directly to Vercel from this repository with no build step.
+This is a static app. Deploy the repository directly to Vercel with no build command.
 
 ## Audio Credits
 

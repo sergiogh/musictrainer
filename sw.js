@@ -1,4 +1,4 @@
-const CACHE_NAME = "signal-path-static-v14";
+const CACHE_NAME = "signal-path-static-v31";
 const SAMPLE_FOLDERS = ["piano", "clean", "acoustic"];
 const SAMPLE_FILES = [
   "C2.mp3",
@@ -21,11 +21,11 @@ const SAMPLE_FILES = [
 const APP_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=20260628g",
-  "/vendor/Tone.js?v=20260628g",
-  "/app.js?v=20260628g",
-  "/manifest.webmanifest?v=20260628g",
-  "/audio/interval-note.wav?v=20260628g",
+  "/styles.css?v=20260629l",
+  "/vendor/Tone.js?v=20260629l",
+  "/app.js?v=20260629l",
+  "/manifest.webmanifest?v=20260629l",
+  "/audio/interval-note.wav?v=20260629l",
   "/favicon.svg",
   "/icons/icon-192.png",
   "/icons/icon-512.png"
